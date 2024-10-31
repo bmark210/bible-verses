@@ -3,7 +3,7 @@
 	position: fixed;
 	overflow: auto;
 	width: 100vw;
-	height: 100vh;
+	height: 100vmax;
 	background: radial-gradient(at center bottom, #272762, #000000);
 }
 
