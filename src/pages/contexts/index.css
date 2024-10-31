@@ -1,9 +1,11 @@
+
+
 .night-sky {
 	display: block;
 	position: fixed;
 	overflow: auto;
 	width: 100vw;
-	height: 100vmax;
+	height: 100vh; /* Сафари поддерживает vmin/vh лучше чем vmax */
 	background: radial-gradient(at center bottom, #272762, #000000);
 }
 
@@ -18,9 +20,20 @@
 	right: 0;
 	background: linear-gradient(to top, rgba(255, 255, 255, 0), white);
 	animation: animShootingStar 10s linear infinite;
+	-webkit-animation: animShootingStar 10s linear infinite; /* Для Safari */
 }
 
 @keyframes animStar {
+	from {
+		transform: translateY(0px);
+	}
+
+	to {
+		transform: translateY(-2560px) translateX(-5560px);
+	}
+}
+
+@-webkit-keyframes animStar { /* Для Safari */
 	from {
 		transform: translateY(0px);
 	}
@@ -44,10 +57,24 @@
 	}
 }
 
-body {
-	background: black;
+@-webkit-keyframes animShootingStar { /* Для Safari */
+	from {
+		transform: translateY(0px) translateX(0px) rotate(-45deg);
+		opacity: 1;
+		height: 5px;
+	}
+
+	to {
+		transform: translateY(-2560px) translateX(-2560px) rotate(-45deg);
+		opacity: 1;
+		height: 800px;
+	}
 }
 
 h1 {
-	color: white
+	color: white;
+	margin: 0;
+	text-align: center;
+	padding-top: 20px;
+	font-family: Arial, sans-serif;
 }
