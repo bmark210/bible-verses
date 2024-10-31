@@ -42,7 +42,7 @@ body {
   height: 100%;
   min-height: 100vmax;
   background: linear-gradient(to bottom right, #103a43, #434343);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1 {
