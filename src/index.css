@@ -232,7 +232,7 @@ h1 {
 
 @media screen and (max-width: 480px) {
   :root {
-    --cart-width: 200px;
+    --cart-width: 100%;
     --cart-height: 240px;
   }
 }
